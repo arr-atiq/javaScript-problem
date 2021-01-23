@@ -9,20 +9,20 @@
 
 // end kilometerToMeter
 
-function budgetCalculator(watch, phone, laptop) {
-    if (watch > 0 && phone > 0 && laptop > 0) {
-        var budge = watch * 50;
-        var budge2 = phone * 100;
-        var budge3 = laptop * 500;
-        var totalBudget = budge + budge2 + budge3;
-    }
-    else{
-        console.log("don't push negetive input");
-    }
-    return totalBudget;
-}
-var output = budgetCalculator(1, 2, 3);
-console.log(output);
+// function budgetCalculator(watch, phone, laptop) {
+//     if (watch > 0 && phone > 0 && laptop > 0) {
+//         var budge = watch * 50;
+//         var budge2 = phone * 100;
+//         var budge3 = laptop * 500;
+//         var totalBudget = budge + budge2 + budge3;
+//     }
+//     else{
+//         console.log("don't push negetive input");
+//     }
+//     return totalBudget;
+// }
+// var output = budgetCalculator(1, 2, 3);
+// console.log(output);
 
 // end budgetCalculator
 
@@ -65,7 +65,21 @@ console.log(output);
 
 // end hotelCost
 
-// var nameArr = [atiq, chandni, labiba, juwel, atqurRahman]
-// function megaFriend(){
 
-// }
+function megaFriend(friendWord){
+    var splitWord = friendWord.split(" ");
+    var strLongestWord = 0;
+    var maxWord = [""];
+    for(var i = 0; i<splitWord.length; i++){
+        if(splitWord[i].length > strLongestWord){
+            strLongestWord = splitWord[i].length;
+            if(maxWord[maxWord.length-1].length < splitWord[i].length){
+                maxWord = [];
+                maxWord.push(splitWord[i]);
+            }
+        }
+    }
+    return maxWord;
+}
+var result = megaFriend('atiq labiba chandni atiqRahman');
+console.log(result);
