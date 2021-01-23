@@ -10,7 +10,7 @@
 // end kilometerToMeter
 
 function budgetCalculator(watch, phone, laptop) {
-    if (watch > 1 && phone > 1 && laptop > 1) {
+    if (watch > 0 && phone > 0 && laptop > 0) {
         var budge = watch * 50;
         var budge2 = phone * 100;
         var budge3 = laptop * 500;
@@ -21,7 +21,7 @@ function budgetCalculator(watch, phone, laptop) {
     }
     return totalBudget;
 }
-var output = budgetCalculator(-1, -2, -3);
+var output = budgetCalculator(1, 2, 3);
 console.log(output);
 
 // end budgetCalculator
@@ -61,3 +61,11 @@ console.log(output);
 // }
 // var result = hotelCost(20);
 // console.log(result);                             
+
+
+// end hotelCost
+
+// var nameArr = [atiq, chandni, labiba, juwel, atqurRahman]
+// function megaFriend(){
+
+// }
